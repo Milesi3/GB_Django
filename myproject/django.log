@@ -1,0 +1,4 @@
+Page "general" is open
+"GET /app_01/main/ HTTP/1.1" 200 341
+Page "about" is open
+"GET /app_01/about/ HTTP/1.1" 200 264
