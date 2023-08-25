@@ -2,3 +2,66 @@ Page "general" is open
 "GET /app_01/main/ HTTP/1.1" 200 341
 Page "about" is open
 "GET /app_01/about/ HTTP/1.1" 200 264
+
+Watching for file changes with StatReloader
+C:\WORK\GB_Django\myproject\app_02\forms.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /
+"GET / HTTP/1.1" 404 2276
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2327
+Not Found: /app_02
+"GET /app_02 HTTP/1.1" 404 2312
+Not Found: /app_02/
+"GET /app_02/ HTTP/1.1" 404 3976
+Not Found: /app_02/admin
+"GET /app_02/admin HTTP/1.1" 404 3991
+Not Found: /app_02/admin/
+"GET /app_02/admin/ HTTP/1.1" 404 3994
+Internal Server Error: /app_02/customers/
+Traceback (most recent call last):
+  File "C:\WORK\GB_Django\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\WORK\GB_Django\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\WORK\GB_Django\myproject\app_02\views.py", line 29, in customer_list
+    return render(request, 'myapp/customer_list.html', {'customers': customers})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\WORK\GB_Django\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\WORK\GB_Django\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\WORK\GB_Django\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: myapp/customer_list.html
+"GET /app_02/customers/ HTTP/1.1" 500 79828
+C:\WORK\GB_Django\myproject\app_02\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Internal Server Error: /app_02/customers/
+Traceback (most recent call last):
+  File "C:\WORK\GB_Django\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\WORK\GB_Django\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\WORK\GB_Django\myproject\app_02\views.py", line 29, in customer_list
+    return render(request, 'app_02/customer_list.html', {'customers': customers})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\WORK\GB_Django\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\WORK\GB_Django\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\WORK\GB_Django\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: app_02/customer_list.html
+"GET /app_02/customers/ HTTP/1.1" 500 79983
+C:\WORK\GB_Django\myproject\app_02\views.py changed, reloading.
+Watching for file changes with StatReloader
