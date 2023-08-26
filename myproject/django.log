@@ -65,3 +65,13 @@ django.template.exceptions.TemplateDoesNotExist: app_02/customer_list.html
 "GET /app_02/customers/ HTTP/1.1" 500 79983
 C:\WORK\GB_Django\myproject\app_02\views.py changed, reloading.
 Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /
+"GET / HTTP/1.1" 404 2276
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2327
+Not Found: /app_02/
+"GET /app_02/ HTTP/1.1" 404 3976
+Not Found: /app_02/cusomers/
+"GET /app_02/cusomers/ HTTP/1.1" 404 4003
+"GET /app_02/customers/ HTTP/1.1" 200 148

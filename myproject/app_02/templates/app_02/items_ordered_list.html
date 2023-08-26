@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Items Ordered</title>
+</head>
+<body>
+    <h1>Items Ordered by {{ customer.name }}</h1>
+    <h2>Last {{ time_range }}:</h2>
+    <ul>
+        {% for product in ordered_products %}
+            <li>{{ product.name }} - {{ product.description }} - {{ product.price }}</li>
+        {% empty %}
+            <li>No items ordered in the last {{ time_range }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
