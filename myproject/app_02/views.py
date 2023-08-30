@@ -5,7 +5,6 @@ from .forms import CustomerForm, ProductForm, OrderForm
 from datetime import datetime, timedelta
 
 
-# Это предположительные функции, но для проверки надо как то научиться дружить с html
 def create_customer(request):
     if request.method == 'POST':
         form = CustomerForm(request.POST)
@@ -19,7 +18,7 @@ def create_customer(request):
 
 def create_product(request):
     if request.method == 'POST':
-        form = ProductForm(request.POST)
+        form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             return redirect('product_list')
@@ -58,7 +57,7 @@ def update_customer(request, pk):
 def update_product(request, pk):
     product = get_object_or_404(Product, pk=pk)
     if request.method == 'POST':
-        form = ProductForm(request.POST, instance=product)
+        form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
             form.save()
             return redirect('product_list')

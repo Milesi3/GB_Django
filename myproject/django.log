@@ -75,3 +75,59 @@ Not Found: /app_02/
 Not Found: /app_02/cusomers/
 "GET /app_02/cusomers/ HTTP/1.1" 404 4003
 "GET /app_02/customers/ HTTP/1.1" 200 148
+Watching for file changes with StatReloader
+Not Found: /
+"GET / HTTP/1.1" 404 2276
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2327
+"GET /app_02/customers/ HTTP/1.1" 200 148
+Not Found: /app_02/product/
+"GET /app_02/product/ HTTP/1.1" 404 4264
+Internal Server Error: /app_02/products/
+Traceback (most recent call last):
+  File "C:\WORK\GB_Django\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\WORK\GB_Django\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\WORK\GB_Django\myproject\app_02\views.py", line 38, in product_list
+    return render(request, 'app_02/product_list.html', {'products': products})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\WORK\GB_Django\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\WORK\GB_Django\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\WORK\GB_Django\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: app_02/product_list.html
+"GET /app_02/products/ HTTP/1.1" 500 80184
+"GET /app_02/product/create/ HTTP/1.1" 200 1116
+"POST /app_02/product/create/ HTTP/1.1" 302 0
+Internal Server Error: /app_02/products/
+Traceback (most recent call last):
+  File "C:\WORK\GB_Django\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\WORK\GB_Django\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\WORK\GB_Django\myproject\app_02\views.py", line 38, in product_list
+    return render(request, 'app_02/product_list.html', {'products': products})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\WORK\GB_Django\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\WORK\GB_Django\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\WORK\GB_Django\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: app_02/product_list.html
+"GET /app_02/products/ HTTP/1.1" 500 80674
+Watching for file changes with StatReloader
+"GET /app_02/products/ HTTP/1.1" 200 193
+C:\WORK\GB_Django\myproject\app_02\views.py changed, reloading.
+Watching for file changes with StatReloader
