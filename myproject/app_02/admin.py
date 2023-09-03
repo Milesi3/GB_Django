@@ -22,7 +22,7 @@ class ProductAdmin(admin.ModelAdmin):
     list_filter = ('addition_date',)
     list_per_page = 20
     search_fields = ('name', 'description')
-    readonly_fields = ('addition_date',)  # Specify the non-editable field here
+    readonly_fields = ('addition_date',)
 
 admin.site.register(Product, ProductAdmin)
 
@@ -30,7 +30,7 @@ class OrderAdmin(admin.ModelAdmin):
     list_display = ('customer', 'total_amount', 'placement_date')
     list_filter = ('placement_date',)
     list_per_page = 20
-    search_fields = ('customer__name',)  # Search by customer name
+    search_fields = ('customer__name',)
     fieldsets = (
         ('Order Information', {
             'fields': ('customer', 'products', 'total_amount')
